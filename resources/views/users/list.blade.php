@@ -11,8 +11,7 @@
   <table id="table-users" class="table table-striped table-bordered shadow-lg  mt-4">
      <thead class="bg-primary text-white">
        <tr>
-         <th scope="col">NOMBRES</th>
-         <th scope="col">APELLIDOS</th>
+         <th scope="col">NOMBRE</th>
          <th scope="col">TIPO DE DOCUMENTO</th>
          <th scope="col">NUMERO DE DOCUMENTO</th>
          <th scope="col">CELULAR</th>
@@ -25,7 +24,6 @@
        @foreach ( $users as $user )
        <tr>
          <td> {{ $user-> name }} </td>
-         <td> {{ $user-> last_name }} </td>
          <td> {{ $user-> document_type }} </td>
          <td> {{ $user-> document_number }} </td>
          <td> {{ $user-> phone }} </td>

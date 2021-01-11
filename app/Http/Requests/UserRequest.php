@@ -25,7 +25,6 @@ class UserRequest extends FormRequest
     {
         return [
             'name'            => 'required',
-            'last_name'       => 'required',
             'document_type'   => 'required',
             'document_number' => 'required|numeric|unique:users,document_number',
             'phone'           => 'required|numeric',
