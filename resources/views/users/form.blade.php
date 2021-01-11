@@ -18,15 +18,6 @@
               </div>
             </div>
 
-            <div class="form-group">
-              <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-              <div class="col-md-8 mx-auto">
-                <label >Apellido</label>
-                <input id="last_name" name="last_name" type="text"  class="form-control" value="{{ old('last_name')}}">
-                {{$errors->first('last_name')}}
-              </div>
-            </div>
-
             <div class="form-group col-md-8 mx-auto ">
                 <label for="state_id" class="control-label">Tipo de documento</label>
                 <select id="document_type" class="form-control" name="document_type" value="{{ old('document_type')}}">
