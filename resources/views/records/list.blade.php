@@ -31,7 +31,7 @@
                 <td> {{ $record->user->name}} </td>
                 <td> {{ $record->user->document_number}} </td>
                 <td> {{ $record->user->phone}} </td>
-                <td> {{ \Carbon\Carbon::parse($record->created_at)->format('m/d/Y H:m:s') }} </td>
+                <td> {{ \Carbon\Carbon::parse($record->created_at)->format('m/d/Y H:i:s') }} </td>
                 <td> {{ $record->initial_temperature }} </td>
                 <td> {{ $record->initial_thermometer_code }} </td>
                 @if ( $record->created_at == $record->updated_at)
@@ -40,7 +40,7 @@
                     <td> Sin registro </td>
                     <td> <a href="{{ route('registros.edit', $record->id)}}" class="btn btn-info" >Registro de salida </a> </td>
                 @else
-                    <td> {{ \Carbon\Carbon::parse($record->updated_at)->format('m/d/Y H:m:s') }} </td>
+                    <td> {{ \Carbon\Carbon::parse($record->updated_at)->format('m/d/Y H:i:s') }} </td>
                     <td> {{ $record->final_temperature }} </td>
                     <td> {{ $record->final_thermometer_code }} </td>
                     <td> Ya </td>
