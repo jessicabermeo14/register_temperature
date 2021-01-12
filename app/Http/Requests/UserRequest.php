@@ -27,9 +27,8 @@ class UserRequest extends FormRequest
             'name'            => 'required',
             'document_type'   => 'required',
             'document_number' => 'required|numeric|unique:users,document_number',
-            'phone'           => 'required|numeric',
-            'address'         => 'required',
-            'email'           => 'required|email|unique:users,email'
+            'phone'           => 'required|numeric'
+
         ];
     }
 }

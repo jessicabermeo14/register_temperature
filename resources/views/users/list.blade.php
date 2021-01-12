@@ -15,20 +15,16 @@
          <th scope="col">TIPO DE DOCUMENTO</th>
          <th scope="col">NUMERO DE DOCUMENTO</th>
          <th scope="col">CELULAR</th>
-         <th scope="col">DIRECIÓN</th>
-         <th scope="col">CORREO ELECTRONICO</th>
          {{-- <th scope="col"></th> --}}
        </tr>
      </thead>
      <tbody>
        @foreach ( $users as $user )
        <tr>
-         <td> {{ $user-> name }} </td>
-         <td> {{ $user-> document_type }} </td>
-         <td> {{ $user-> document_number }} </td>
-         <td> {{ $user-> phone }} </td>
-         <td> {{ $user-> address }} </td>
-         <td> {{ $user-> email }} </td>
+         <td> {{ $user->name }} </td>
+         <td> {{ $user->document_type }} </td>
+         <td> {{ $user->document_number }} </td>
+         <td> {{ $user->phone }} </td>
          {{-- <td>
            <form action="{{ route('usuarios.destroy', $user->id)}}" method="POST">
             <a href="usuarios/{{$user->id}}/edit" class="btn btn-info" >Editar</a>

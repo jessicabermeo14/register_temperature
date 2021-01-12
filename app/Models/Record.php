@@ -16,7 +16,10 @@ class Record extends Model
      */
     protected $fillable = [
         'user_id',
-        'temperature',
+        'initial_temperature',
+        'final_temperature',
+        'initial_thermometer_code',
+        'final_thermometer_code'
     ];
 
     /**

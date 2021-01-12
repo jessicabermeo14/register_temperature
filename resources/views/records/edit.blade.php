@@ -5,25 +5,26 @@
   <div class="row">
     <div class="col-md-12">
       <div class="well well-sm">
-        <div class="loader" style="display: none;">
-          <div class="lds-ripple"><div></div><div></div></div>
-        </div>
-        <form class="form-horizontal" method="POST" action="/registros/{{$record->id}}">
+        <form class="form-horizontal" method="POST" action="{{ route('registros.update', $record->id)}}">
           @csrf
           @method('PUT')          
           <fieldset>
-            <h1 class="text-center header">Editar Ingresos</h1>
+            <h1 class="text-center header">Registro de salida</h1>
             <div class="form-group">
               <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
               <div class="col-md-8 mx-auto">
-              <input id="document_number" name="document_number" type="text" placeholder="Documento*" class="form-control" value="{{$record->document_number}}">
+                <label>Temperatura Final</label>
+                <input id="final_temperature" name="final_temperature" type="text" class="form-control">
+                {{$errors->first('final_temperature')}}
               </div>
             </div>
 
             <div class="form-group">
               <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
               <div class="col-md-8 mx-auto">
-              <input id="temperature" name="temperature" type="text" placeholder="Temperatura*" class="form-control" value="{{$record->temperature}}">
+                <label>Código del termómetro</label>
+                <input id="final_thermometer_code" name="final_thermometer_code" type="text" class="form-control">
+                {{$errors->first('final_thermometer_code')}}
               </div>
             </div>
 

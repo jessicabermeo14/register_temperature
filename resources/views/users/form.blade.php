@@ -17,7 +17,6 @@
                 {{$errors->first('name')}}
               </div>
             </div>
-
             <div class="form-group col-md-8 mx-auto ">
                 <label for="state_id" class="control-label">Tipo de documento</label>
                 <select id="document_type" class="form-control" name="document_type" value="{{ old('document_type')}}">
@@ -42,24 +41,6 @@
                 <label >Télefono</label>
                 <input id="phone" name="phone" type="number"  class="form-control" value="{{ old('phone')}}">
                 {{$errors->first('phone')}}
-              </div>
-            </div>
-
-            <div class="form-group">
-              <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
-              <div class="col-md-8 mx-auto">
-                <label >Dirección</label>
-                <input id="address" name="address" type="text"  class="form-control" value="{{ old('address')}}">
-                {{$errors->first('address')}}
-              </div>
-            </div>
-
-            <div class="form-group">
-              <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
-              <div class="col-md-8 mx-auto">
-                <label >Correo electronico</label>
-                <input id="email" name="email" type="text"  class="form-control" value="{{ old('email')}}">
-                {{$errors->first('email')}}
               </div>
             </div>
 

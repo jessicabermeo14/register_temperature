@@ -16,7 +16,10 @@ class CreateRecordsTable extends Migration
         Schema::create('records', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('temperature');
+            $table->string('initial_temperature');
+            $table->string('final_temperature')->nullable();
+            $table->string('initial_thermometer_code')->nullable();
+            $table->string('final_thermometer_code')->nullable();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
         });

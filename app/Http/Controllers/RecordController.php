@@ -16,7 +16,6 @@ class RecordController extends Controller
     public function index()
     {
         $records = Record::all();
-        //$records = Record::paginate(5);
         return view('records.list')->with('records', $records);
     }
 
@@ -40,12 +39,13 @@ class RecordController extends Controller
     {
         $request->validate([
 
-            'user_id'     => 'required',
-            'temperature' => 'required'
+            // 'user_id'     => 'required',
+            // 'temperature' => 'required',
+            // 'temperature' => 'required'
 
         ]);
 
-        $temperature = $request->temperature;
+        $temperature = $request->initial_temperature;
         if ($temperature >= 38) {
             return view('records.access-denied');
         } else {
@@ -88,13 +88,13 @@ class RecordController extends Controller
     {
         $request->validate([
 
-            'user_id'     => 'required',
-            'temperature' => 'required'
+            'final_temperature'      => 'required',
+            'final_thermometer_code' => 'required'
 
         ]);
         $record = Record::find($id);
         $record->update($request->all());
-        return redirect('records.list');
+        return redirect('/registros');
     }
 
     /**

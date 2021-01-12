@@ -26,7 +26,7 @@
 
             <div class="form-group">
               <div class="col-md-12 text-center">
-              <a href="{{ route('registros.index') }}" >Ver Historico</a>
+              <a href="{{ route('registros.index') }}" >Registrar la salida </a>
               </div>
             </div>
             
