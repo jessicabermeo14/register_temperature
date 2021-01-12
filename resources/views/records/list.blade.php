@@ -38,16 +38,14 @@
                     <td> Sin registro </td>
                     <td> Sin registro </td>
                     <td> Sin registro </td>
+                    <td> <a href="{{ route('registros.edit', $record->id)}}" class="btn btn-info" >Registro de salida </a> </td>
                 @else
-                    {{-- <td> Ya salio </td> --}}
                     <td> {{ \Carbon\Carbon::parse($record->updated_at)->format('m/d/Y H:m:s') }} </td>
-                    {{-- <td> ya salio </td> --}}
                     <td> {{ $record->final_temperature }} </td>
-                    {{-- <td> ya salio  </td> --}}
                     <td> {{ $record->final_thermometer_code }} </td>
+                    <td> Ya </td>
                 @endif
 
-                <td> <a href="{{ route('registros.edit', $record->id)}}" class="btn btn-info" >Registro de salida </a> </td>
             </tr>
             @endforeach
         </tbody>
