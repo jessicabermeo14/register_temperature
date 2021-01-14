@@ -14,7 +14,7 @@
               <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
               <div class="col-md-8 mx-auto">
                 <label>Temperatura Inicial</label>
-                <input id="initial_temperature" name="initial_temperature" type="text" class="form-control">
+                <input id="initial_temperature" name="initial_temperature" type="text" class="form-control" required>
                 {{$errors->first('initial_temperature')}}
               </div>
             </div>
@@ -23,7 +23,7 @@
               <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
               <div class="col-md-8 mx-auto">
                 <label>Código del termómetro </label>
-                <input id="initial_thermometer_code" name="initial_thermometer_code" type="text" class="form-control">
+                <input id="initial_thermometer_code" name="initial_thermometer_code" type="text" class="form-control" required>
                 {{$errors->first('initial_thermometer_code')}}
               </div>
             </div>

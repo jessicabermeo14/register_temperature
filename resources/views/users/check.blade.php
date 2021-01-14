@@ -18,9 +18,12 @@
               </div>
             </div>
 
-            <div class="form-group">
-              <div class="col-md-12 text-center">
-              <button id='button-consult' type="submit" class="btn btn-primary btn-lg">Consultar</button>
+            <div class="form-group container">
+              <div class="row justify-content-center">
+                <div class="mx-auto">
+                  <button id='button-consult' type="submit" class="btn btn-primary btn-lg mx-auto">Consultar</button>
+                  <a href="{{ route('usuarios.create') }}"id='button-consult' class="btn btn-primary btn-lg mx-auto">Registrar</a>
+                </div>
               </div>
             </div>
 
